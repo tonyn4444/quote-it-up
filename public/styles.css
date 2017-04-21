@@ -1,6 +1,7 @@
-body {
+#body {
 	/*border: 2px solid grey;*/
-	background: #283e4a !important;
+	/*background: #283e4a !important;*/
+	background: #2c3e50;
 }
 
 .jumbotron {
@@ -15,7 +16,7 @@ body {
 
 .container {
 	/*border: 2px solid blue;*/
-	margin: 15% 0;
+	margin: 13% 0;
 	text-align: center;
 }
 

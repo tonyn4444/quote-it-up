@@ -9,23 +9,29 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i" rel="stylesheet">
 </head>
-<body>
+<body id="body">
 
 <div class="container">
 	<div class="jumbotron">
 		<div id="content">
 		<p>
-			<h2>"<%= data.quote %>"</h2><br>
-			<h4 class="caption quote">- <%= data.author %></h4>
+			<h2 class="change" id="quote">"<%= data.quote %>"</h2><br>
+			<h4 class="caption quote change" id="author">- <%= data.author %></h4>
 		</p>
-		<i class="fa fa-twitter-square fa-3x"></i>
-		<a href="#" class="btn btn-default">New Quote</a>
+		<i class="fa fa-twitter-square fa-3x change"></i>
+		<a href="/" class="btn btn-default change">New Quote</a>
 		</div>
 	</div>
-	<h4 id="credit">By Tony Nguyen</h4>
+	<h4 id="credit" class="change">By Tony Nguyen</h4>
 </div>
 
 
 
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="quote.js" type="text/javascript"></script>
+
 </html>
