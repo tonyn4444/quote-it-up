@@ -1,3 +1,56 @@
 body {
-	/*background: grey;*/
+	/*border: 2px solid grey;*/
+	background: #283e4a !important;
+}
+
+.jumbotron {
+	/*border: 2px solid red;*/
+	border-radius: 10%;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 10px;
+	/*height: 250px;*/
+	position: relative;
+}
+
+.container {
+	/*border: 2px solid blue;*/
+	margin: 15% 0;
+	text-align: center;
+}
+
+span {
+	/*border: 2px solid green;*/
+}
+
+#content {
+	padding-bottom: 35px;
+}
+
+i {
+	/*border: 2px solid red;*/
+  float: left;
+}
+
+.quote {
+	/*border: 2px solid blue;*/
+	bottom: 100px;
+	left: 350px;
+  text-align: right;
+}
+
+#credit {
+	/*border: 2px solid white;*/
+	color: white;
+	margin: 0 auto;
+}
+
+h3, h2 {
+	/*border: 2px solid green;*/
+  text-align: center;
+}
+
+a {
+  float: right;
+  margin-top: 20px;
 }
