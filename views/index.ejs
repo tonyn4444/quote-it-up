@@ -18,11 +18,11 @@
 			<h2 class="change" id="quote">"<%= data.quote %>"</h2><br>
 			<h4 class="caption quote change" id="author">- <%= data.author %></h4>
 		</p>
-		<i class="fa fa-twitter-square fa-3x change"></i>
-		<a href="/" class="btn btn-default change">New Quote</a>
+		<a id="tweet" href="https://twitter.com/intent/tweet?text=<%= data.quote %>%20-<%=data.author%>" class="twitter-share-button"><i class="fa fa-twitter-square fa-3x change"></i></a>
+		<a href="/" class="btn btn-default change" id="new-quote-btn">New Quote</a>
 		</div>
 	</div>
-	<h4 id="credit" class="change">By Tony Nguyen</h4>
+	<h4 id="credit">By Tony Nguyen</h4>
 </div>
 
 

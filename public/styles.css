@@ -28,6 +28,10 @@ span {
 	padding-bottom: 35px;
 }
 
+#tweet {
+	float: left;
+}
+
 i {
 	/*border: 2px solid red;*/
   float: left;

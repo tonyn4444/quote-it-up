@@ -12,7 +12,7 @@ var options = {
 	}
 }
 
-	$('a').on('click', function(event) {
+	$('#new-quote-btn').on('click', function(event) {
 		// Change colors of html attributes
 		var ranNum = Math.floor((Math.random() * 12))
 		event.preventDefault();
@@ -32,6 +32,7 @@ var options = {
 				var parsedData = JSON.parse(response);
 				$("#author").text("- " +parsedData.author);
 				$("#quote").text('"' + parsedData.quote + '"');
+				$("#tweet").attr("href", "https://twitter.com/intent/tweet?text=" + parsedData.quote + "%20-" + parsedData.author);
 			}
 		});
 	});
