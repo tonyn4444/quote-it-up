@@ -16,12 +16,13 @@ var options = {
 		// Change colors of html attributes
 		var ranNum = Math.floor((Math.random() * 12))
 		event.preventDefault();
-		console.log("clicked")
-		$('#body').css("background", colors[ranNum]);
-		$(".change").css("color", colors[ranNum]);
+
+		// $('#body').animate({
+		// 	backgroundColor: colors[ranNum],
+		// 	color: colors[ranNum]
+		// }, 700)
 
 		// Make request for quote to API
-		
 		$.ajax({
 			headers: {
 				'X-Mashape-Key': API_KEY
@@ -30,9 +31,25 @@ var options = {
 			success: function(response) {
 				console.log(response);
 				var parsedData = JSON.parse(response);
-				$("#author").text("- " +parsedData.author);
-				$("#quote").text('"' + parsedData.quote + '"');
-				$("#tweet").attr("href", "https://twitter.com/intent/tweet?text=" + parsedData.quote + "%20-" + parsedData.author);
+
+				// $('#body').animate({
+				// 	backgroundColor: colors[ranNum]
+				// }, 700);
+
+				$('.change').animate({
+					opacity: 0
+				}, 700, function() {
+					$("#author").text("- " + parsedData.author);
+					$("#quote").text('"' + parsedData.quote + '"');
+					$(".change").css("color", colors[ranNum]);
+					$(".body").css('background-color', colors[ranNum]);
+					$("#tweet").attr("href", "https://twitter.com/intent/tweet?text=" + parsedData.quote + "%20-" + parsedData.author);
+					$(this).animate({
+						opacity: 1
+					}, 700)
+					
+					
+				});
 			}
 		});
 	});
