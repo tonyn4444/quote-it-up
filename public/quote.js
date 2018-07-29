@@ -56,4 +56,5 @@ var options = {
 			}
 		});
 	});
+	$('#new-quote-btn').trigger('click');
 });
