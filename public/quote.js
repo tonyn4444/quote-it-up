@@ -29,8 +29,10 @@ var options = {
 			},
 			url: url,
 			success: function(response) {
-				console.log(response);
-				var parsedData = JSON.parse(response);
+				// console.log('response', response);
+				// var parsedData = JSON.parse(response);
+				const parsedData = response[0];
+				console.log('parsedData', parsedData);
 
 				// $('#body').animate({
 				// 	backgroundColor: colors[ranNum]
@@ -42,7 +44,8 @@ var options = {
 					$("#author").text("- " + parsedData.author);
 					$("#quote").text('"' + parsedData.quote + '"');
 					$(".change").css("color", colors[ranNum]);
-					$(".body").css('background-color', colors[ranNum]);
+					$("#body").css('background-color', colors[ranNum]);
+					$('html').css('background-color', colors[ranNum]);
 					$("#tweet").attr("href", "https://twitter.com/intent/tweet?text=" + parsedData.quote + "%20-" + parsedData.author);
 					$(this).animate({
 						opacity: 1
